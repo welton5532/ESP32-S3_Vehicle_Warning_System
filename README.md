@@ -92,8 +92,9 @@ The system is controlled via the **RemoteXY** App over Bluetooth, featuring an i
 ## Hardware Architecture
 
 ### Circuit Schematic (KiCad)
+<img width="4200" height="2550" alt="image" src="https://github.com/user-attachments/assets/906c5ba1-b356-4466-bbe4-4c1d5c487d7d" />
 
-*(Above: Complete circuit schematic including ESP32-S3, HUB75 interface, and power management)*
+*(Above: Complete circuit schematic including ESP32-S3, HUB75 interface)*
 
 ### Core Specifications
 
@@ -170,10 +171,13 @@ Once the terminal shows `SUCCESS`, restart the board. If the Serial Monitor show
 ---
 
 ## Gallery & Demo
+![app_demo_ios](https://github.com/user-attachments/assets/f7ea3e33-943e-4b2c-b774-26eb039f4f1b)
+
+
 
 ### Live Demo Video
 
-*(Above: Real-time demonstration showing the switch between Alcohol Mode and Warning Mode)*
+https://youtu.be/1AC4jYxGVUE?si=3yO8Ul78Wa-x0ozm
 
 ---
 
