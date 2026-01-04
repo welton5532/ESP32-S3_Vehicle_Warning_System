@@ -19,7 +19,7 @@
 #include <BLEDevice.h>
 #include <RemoteXY.h>
 
-#define REMOTEXY_BLUETOOTH_NAME "Vehicle_Warning"
+#define REMOTEXY_BLUETOOTH_NAME "Smart_Warning"
 
 #pragma pack(push, 1)  
 uint8_t const PROGMEM RemoteXY_CONF_PROGMEM[] =   // 216 bytes V19 
@@ -57,6 +57,7 @@ struct {
 #define PIN_SHARED_CTRL 2   // LOW=酒測(Sensor ON), HIGH=三角燈(Light ON)
 #define PIN_BUZZER      42  // 蜂鳴器 PWM
 #define PIN_MQ3         1   // 酒精感測器 ADC
+const int PIN_RGB_BUILTIN = 38;   // Built-in RGB LED (NeoPixel)
 
 // HUB75 Pins
 #define R1 4
@@ -301,7 +302,8 @@ void handleRemoteXYInput() {
         case 3:
             if (btn1_click && brightness > 0) brightness -= 10;
             if (btn2_click && brightness < 255) brightness += 10;
-            if (brightness > 255) brightness = 255; 
+            if (brightness > 255) brightness = 255;
+            if (brightness < 0) brightness = 0;
             if (need_ui_update) {
                 sprintf(RemoteXY.value_01, "%d", brightness);
                 sprintf(RemoteXY.edit_01, "LED Brightness");
@@ -376,7 +378,12 @@ void setup() {
     
     pinMode(PIN_SHARED_CTRL, OUTPUT);
     digitalWrite(PIN_SHARED_CTRL, LOW);
-    
+    // Initialize Built-in RGB LED
+    // Most S3 RGBs are "Smart LEDs" that need a signal, not just HIGH/LOW.
+    // neopixelWrite(PIN, Red, Green, Blue) is a built-in ESP32 function.
+    // We send 0,0,0 to force it OFF at startup.
+    neopixelWrite(PIN_RGB_BUILTIN, 0, 0, 0);
+
     ledcSetup(0, 2000, 8); 
     ledcAttachPin(PIN_BUZZER, 0);
 
