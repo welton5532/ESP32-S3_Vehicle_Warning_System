@@ -131,6 +131,10 @@ The system is controlled via the **RemoteXY** App over Bluetooth, featuring an i
 2. `git clone` this repository.
 3. Ensure drivers (CH343/CP210x) are installed on your computer.
 
+<img width="1955" height="1072" alt="Screenshot_2026-01-05_19-17-53_env1" src="https://github.com/user-attachments/assets/578c96ed-f980-4268-8dab-2cc0bb324772" />
+
+<img width="1955" height="1072" alt="Screenshot_2026-01-05_19-18-25_env2" src="https://github.com/user-attachments/assets/aa2cea81-d20e-4533-a0fc-7ddc5d1787cb" />
+
 ---
 
 ## Font Upload Guide
@@ -155,6 +159,10 @@ You **DO NOT** need to generate the font yourself. You simply need to upload it 
 
 4. Click **Upload Filesystem Image**.
 5. PlatformIO will package the `data` folder and flash it to the board.
+6. 
+<img width="1384" height="1071" alt="Screenshot_2026-01-05_19-19-59_env3" src="https://github.com/user-attachments/assets/890d8019-42b1-4ebc-bd25-c1981d477838" />
+
+   
 
 ### Step 2: Verify
 
