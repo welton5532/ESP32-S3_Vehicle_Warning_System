@@ -175,7 +175,8 @@ Once the terminal shows `SUCCESS`, restart the board. If the Serial Monitor show
 
 ![IMG_20260105_074116_340](https://github.com/user-attachments/assets/8857891c-f925-4da2-9cc1-2f618d67df59)
 
-![IMG_20260105_074423_292](https://github.com/user-attachments/assets/53ead49c-a09a-4dbe-9ffe-af01be61dd5b)
+![IMG_20260105_074423_292](https://github.com/user-attachments/assets/9984e6a8-7345-48a9-817e-f2b56f99c18a)
+
 
 ![IMG_20260105_074443_389](https://github.com/user-attachments/assets/8d5d74be-c7e7-4c39-a80a-a9caad32eb6e)
 
